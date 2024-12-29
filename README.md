@@ -11,7 +11,7 @@ This project explores and implements three different approaches to translating G
 ### Fine-Tuning Approaches
 
 - **Base Model**: Utilized LLaMA 3.2 models with parameter-efficient tuning using QLoRA.
-- **Dataset**: Gardiner codes and their English translations structured into conversational formats.
+- **Dataset**: Gardiner codes and their English translations.
 - **Evaluation Metrics**: BLEU, ROUGE-L, F1, accuracy, precision, and recall.
 
 ### Prompt Engineering Approach
@@ -41,7 +41,7 @@ This project explores and implements three different approaches to translating G
 ### Fine-Tuning Approaches
 
 1. **Prepare the Dataset:**
-   - Ensure the dataset is in a structured conversational format.
+   - Ensure the dataset is in a structured format.
    - Include Gardiner codes with their English translations.
 
 2. **Train the Model:**
