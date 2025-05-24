@@ -1,39 +1,54 @@
+---
+
+# Hieroglyphic Translation to English
+
+A comprehensive exploration of translating ancient Egyptian hieroglyphs into English using machine learning techniques. This project delves into three primary approaches: Regular Fine-Tuning, Retrieval-Augmented Generation (RAG), and Prompt Engineering, leveraging LLaMA models.
 
 ---
 
-# 🏺 Hieroglyphic Translation to English
+## Table of Contents
 
-A Python-based tool that leverages machine learning to translate ancient Egyptian hieroglyphic images into English text. This project provides an end-to-end pipeline for image preprocessing, character recognition, and text translation, making it a powerful utility for digital Egyptology and heritage preservation.
+* [Features](#features)
+* [Project Structure](#project-structure)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Approaches](#approaches)
+
+  * [1. Regular Fine-Tuning](#1-regular-fine-tuning)
+  * [2. Retrieval-Augmented Generation (RAG)](#2-retrieval-augmented-generation-rag)
+  * [3. Prompt Engineering](#3-prompt-engineering)
+* [Evaluation](#evaluation)
+* [Contributing](#contributing)
+* [License](#license)
 
 ---
 
-## 🚀 Features
+## Features
 
-* 📷 Input: Accepts images of hieroglyphs.
-* 🧠 ML Model: Uses pre-trained deep learning models for glyph recognition.
-* 🔤 Output: Translates hieroglyphic symbols into modern English.
-* 🛠️ Modular Code: Easy to extend or integrate with other pipelines.
-* 🧪 Includes unit tests for critical components.
+* **Image-to-Text Translation**: Converts images of hieroglyphs into English text.
+* **Multiple ML Approaches**: Implements Regular Fine-Tuning, RAG, and Prompt Engineering.
+* **Modular Codebase**: Organized for scalability and ease of understanding.
+* **Evaluation Metrics**: Includes scripts to assess model performance.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Hieroglyphic-translation-to-English/
-├── data/                   # Sample images and annotation datasets
-├── models/                 # Pre-trained model weights and configs
-├── src/                    # Core source code
-│   ├── translate.py        # Main entry point for translation
-│   └── utils/              # Utility modules (e.g., image processing, decoding)
-├── tests/                  # Unit and integration tests
+├── data/                   # Sample datasets
+├── notebooks/              # Jupyter notebooks for experiments
+├── src/                    # Source code
+│   ├── translate.py        # Main translation script
+│   └── utils/              # Helper functions
 ├── requirements.txt        # Python dependencies
-└── README.md               # Project overview and usage guide
+├── README.md               # Project overview
+└── Research Papers.pdf     # Reference materials
 ```
 
 ---
 
-## 🧰 Installation
+## Installation
 
 1. **Clone the repository:**
 
@@ -57,7 +72,7 @@ Hieroglyphic-translation-to-English/
 
 ---
 
-## ⚙️ Usage
+## Usage
 
 ### Translate a Hieroglyphic Image
 
@@ -73,21 +88,31 @@ python src/translate.py --help
 
 ---
 
-## 🧪 Testing
+## Approaches
 
-Run the included tests using:
+### 1. Regular Fine-Tuning
 
-```bash
-pytest tests/
-```
+Fine-tunes pre-trained LLaMA models on a dataset of Gardiner codes paired with their English translations. This approach adapts the model specifically for the hieroglyphic translation task.
 
-Ensure all major functionalities perform correctly under different input scenarios.
+### 2. Retrieval-Augmented Generation (RAG)
+
+Combines retrieval mechanisms with generation models. Relevant translations are retrieved from a database to provide context, enhancing the model's output accuracy.
+
+### 3. Prompt Engineering
+
+Utilizes carefully crafted prompts to guide the LLaMA models in translating hieroglyphs without additional training. This lightweight approach leverages the model's existing knowledge.
 
 ---
 
-## 🤝 Contributing
+## Evaluation
 
-Contributions are welcome! Feel free to fork the repository and open a pull request with your improvements or new features.
+Evaluation scripts are provided to assess the performance of each approach using metrics such as BLEU scores and accuracy rates. Detailed results and analysis can be found in the `notebooks/` directory.
+
+---
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
 
 ### To contribute:
 
@@ -97,18 +122,9 @@ Contributions are welcome! Feel free to fork the repository and open a pull requ
 * Push to the branch (`git push origin feature-xyz`)
 * Open a pull request
 
----
-
-## 📜 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
-## 📬 Contact
-
-For questions, ideas, or collaborations, feel free to open an issue or contact the repository maintainer.
+If you need further assistance or have questions, feel free to open an issue or contact the repository maintainer.
 
 ---
-
-Would you like me to directly push this updated `README.md` to your GitHub repo as a pull request?
